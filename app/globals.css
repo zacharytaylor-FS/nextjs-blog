@@ -6,6 +6,8 @@ html,
 body,
 :root {
   height: 100%;
+  font-size: 18px;
+  font-family: var(--font-lato);
   background-color: black;
   color-scheme: dark;
 }
