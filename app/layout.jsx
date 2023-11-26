@@ -15,14 +15,16 @@ export const metadata = {
 }
 
 const RootLayout = ({ children }) => (
-    <html lang="en" className='dark'>
-      <body className={`${openSans.className} ${openSans.variable} ${lato.variable}`}>
-      <Providers>
+    <html lang="en" className='dark text-foreground bg-background'>
+      <body className={`${openSans.className} ${openSans.variable} ${lato.variable} flex h-screen flex-col md:overflow-scroll`}>
+        <Providers>
+          <Header />
+          <main className='flex-grow p-3 md:overflow-y-auto md:p-2'>
 
-        <Header />
-        {children}
-        <Footer />
-      </Providers>
+            {children}
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
 )
