@@ -31,24 +31,24 @@ const Header = () => {
                                 width='56'
                                 alt="BLK logo"
                             />
-                            <span className="hidden sm:block self-center px-1 text-md font-semibold dark:text-white">Tech</span>
+                            <span className="hidden md:block self-center px-1 text-md font-semibold dark:text-white">Tech</span>
                         </Link>
                     </NavbarBrand>
                 </NavbarContent>
                     <NavbarContent className="hidden sm:flex gap-4" justify="center">
                         <NavbarItem>
-                            <Link color="foreground" className="hover:text-white" href='/'>about</Link>
+                            <Link color="foreground" className="hover:text-white" href='/about'>About</Link>
                         </NavbarItem>
                         <NavbarItem isActive>
-                            <Link aria-current='/' className="hover:text-white" color='secondary 'href='/'>feed</Link>
+                            <Link aria-current='/categories' className="hover:text-white" color='secondary 'href='/categories'>Categories</Link>
                         </NavbarItem>
                         <NavbarItem>
-                            <Link color="foreground" className="hover:text-white" href='/studio'>studio</Link>
+                            <Link color="foreground" className="hover:text-white" href='/studio'>Studio</Link>
                         </NavbarItem>
                         
                     </NavbarContent>
 
-                <NavbarContent as='div' className="items-center" justify="end">
+                <NavbarContent as='div' className="items-center hidden lg:flex" justify="end">
              
                     <NavbarItem className="hidden lg:flex">
                         <Link href='/signup' className="text-slate-500 px-2 py-2 mr-3 rounded-lg ">
@@ -56,7 +56,7 @@ const Header = () => {
                         </Link>
                     </NavbarItem>
                     <NavbarItem>
-                        <Button as={Link} color="secondary" href="/" variant="flat">Sign Up</Button>
+                        <Button as={Link} className="bg-pink-500 opacity-60 hover:opacity-100" href="/" variant="flat">Sign Up</Button>
                     </NavbarItem>
                 </NavbarContent>
                 
