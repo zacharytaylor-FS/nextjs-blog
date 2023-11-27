@@ -1,7 +1,7 @@
 import Container from './Container'
 const Footer = () => {
     return (
-        <footer className="text-slate-500 sticky bottom-0 left-0 right-0 text-white p-3">
+        <footer className="sticky bottom-0 left-0 right-0 text-white p-3">
         <Container>
 
         </Container>
