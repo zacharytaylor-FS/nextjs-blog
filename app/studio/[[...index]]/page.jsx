@@ -1,3 +1,5 @@
+// `app/studio/[[...index]]/page.jsx` is the UI for the '/studio' URL
+
 'use client'
 
 /**

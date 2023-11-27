@@ -14,7 +14,12 @@ export const metadata = {
   description: 'A headless CMS Blog',
 }
 
-const RootLayout = ({ children }) => (
+const RootLayout = ({ 
+  /**
+   * Layouts must accept a children prop.
+   * This will be populated with nested layouts or pages
+   */
+  children }) => (
     <html lang="en" className='dark text-foreground bg-background'>
       <body className={`${openSans.className} ${openSans.variable} ${lato.variable} flex h-screen flex-col md:overflow-scroll`}>
         <Providers>
