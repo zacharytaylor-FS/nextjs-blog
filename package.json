@@ -21,6 +21,7 @@
     "react": "^18",
     "react-dom": "^18",
     "sanity": "^3.20.1",
+    "sanity-plugin-vercel-deploy": "^3.3.4",
     "server-only": "^0.0.1",
     "styled-components": "^6.1.1",
     "suspend-react": "^0.1.3"

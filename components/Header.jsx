@@ -18,7 +18,7 @@ const menuItems = [
   ];
 
 const Header = () => {
-    const items = menuItems.map(i => <li>{i}</li>)
+    // const items = menuItems.map(i => <li>{i}</li>)
     return (
         <header className="w-full">
             <Navbar isBordered className="flex items-center justify-between p-2 m-2 text-gray-600 dark:text-gray-400">
