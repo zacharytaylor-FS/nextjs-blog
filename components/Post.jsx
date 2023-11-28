@@ -4,7 +4,6 @@ import ReactMarkdown from 'react-markdown'
 
 import Link from 'next/link'
 const Post = ({ post }) => {
-    const post = []
 
   const authorName = post.author ? post.author.name : 'Unknown author'
   return (

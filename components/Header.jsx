@@ -40,7 +40,7 @@ const Header = () => {
                             <Link color="foreground" className="hover:text-white" href='/about'>About</Link>
                         </NavbarItem>
                         <NavbarItem isActive>
-                            <Link aria-current='/categories' className="hover:text-white" color='secondary 'href='/categories'>Categories</Link>
+                            <Link aria-current='categories' className="hover:text-white" color='secondary 'href='/categories'>Categories</Link>
                         </NavbarItem>
                         <NavbarItem>
                             <Link color="foreground" className="hover:text-white" href='/studio'>Studio</Link>
