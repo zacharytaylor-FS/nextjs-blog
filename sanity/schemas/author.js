@@ -9,6 +9,11 @@ export const author = {
       type: 'string',
     },
     {
+      name: 'nickname',
+      title: 'Nickname',
+      type: 'string',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',

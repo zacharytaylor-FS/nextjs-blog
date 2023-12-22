@@ -1,10 +1,9 @@
-import React from 'react'
-import {SanityDocument} from '@sanity/client'
-import {Card, CardHeader, CardBody, CardFooter, Divider, Image} from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Divider, Image } from "@nextui-org/react";
 import Link from 'next/link';
 import Container from './Container';
 
-const PostDetail = ({posts}) => {
+const PostDetail = ({posts = []}) => {
+    
     return (
         <Container className=''>
             <Card className='w-[450px] min-w-[380px]'>
@@ -16,14 +15,14 @@ const PostDetail = ({posts}) => {
                     src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
                     width={40}
                 />
-                <div className='flex flex-col'>
-                    <p className='text-md'>NextUI</p>
-                    <Link isExternal href='https://nextui.org' className='text-small'>nextui.org</Link>
-                </div>
             </CardHeader>
             <Divider />
                 <CardBody className=''>
-                    <p>Post details</p>
+                <div className='flex flex-col'>
+                    <p className='text-md'>NextUI</p>
+                    <Link href='https://nextui.org' className='text-small'>nextui.org</Link>
+                </div>
+                    <p>{posts.title}</p>
                 </CardBody>
             </Card>
         </Container>

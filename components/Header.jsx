@@ -1,7 +1,7 @@
 'use client'
 
+import { Button, Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
 import Image from "next/image";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Button, Input} from "@nextui-org/react";
 import Link from "next/link";
 
 const menuItems = [
@@ -19,9 +19,15 @@ const menuItems = [
 
 const Header = () => {
     const items = menuItems.map(i => <li>{i}</li>)
+    const navLinks = [
+        {href: "/", label: 'Home'},
+        {href: "/about", label: 'About'},
+        {href: "/categories", label: 'Categories'},
+        {href: "/studio", label: 'Studio'},
+    ]
     return (
         <header className="w-full">
-            <Navbar isBordered className="flex items-center justify-between p-2 m-2 text-gray-600 dark:text-gray-400">
+            <Navbar isBordered className="flex items-center justify-between m-2 text-gray-600 dark:text-gray-400 bg-inherit">
                 <NavbarContent justify="start">
                     <NavbarBrand className="flex items-center justify-between">
                         <Link href='/' className="flex">
@@ -35,18 +41,13 @@ const Header = () => {
                         </Link>
                     </NavbarBrand>
                 </NavbarContent>
-                    <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                        <NavbarItem>
-                            <Link color="foreground" className="hover:text-white" href='/about'>About</Link>
+                    {navLinks.map((link) => (
+                <NavbarContent key={link._id} className="hidden sm:flex gap-4" justify="center">
+                        <NavbarItem key={link.label} isActive>
+                            <Link color="foreground" key={link.label} className="hover:text-[#2a86ff]" href={link.href}>{link.label}</Link>
                         </NavbarItem>
-                        <NavbarItem isActive>
-                            <Link aria-current='/categories' className="hover:text-white" color='secondary 'href='/categories'>Categories</Link>
-                        </NavbarItem>
-                        <NavbarItem>
-                            <Link color="foreground" className="hover:text-white" href='/studio'>Studio</Link>
-                        </NavbarItem>
-                        
-                    </NavbarContent>
+                </NavbarContent>
+                    ))}
 
                 <NavbarContent as='div' className="items-center hidden lg:flex" justify="end">
              
