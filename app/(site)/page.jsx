@@ -8,16 +8,12 @@ import { sanityFetch } from "../../sanity/lib/sanityFetch";
 
 export default async function Home() {
   const posts = await sanityFetch({ query: postsQuery });
-  // const data = await sanityFetch({ query, tags: ["post"] });
+  // console.log(posts)
   return(
     <div>
       <Hero />
       <Posts posts={posts} />
-      {/* <Post posts={posts} /> */}
-      {/* <DocumentsCount data={data} /> */}
       <PostDetails posts={posts}/>
-      {/* <Card /> */}
-      {/* <TabList /> */}
     </div>
   ) 
   

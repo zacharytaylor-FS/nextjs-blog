@@ -8,7 +8,7 @@ body,
   height: 100%;
   font-size: 18px;
   font-family: var(--font-lato);
-  background-color: #120E16;
+  /* background-color: #120E16; */
   /* color-scheme: dark; */
-  color: #F6F6F7;
+  /* color: #F6F6F7; */
 }

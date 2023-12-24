@@ -22,25 +22,5 @@ export async function generateStaticParams() {
 export default async function Page({params}) {
   const post = await sanityFetch({query: postQuery, params})
 
-  return <Post post={post} className='text-neutral-200'/>;
+  return <Post post={post} className=''/>;
 }
-// Client Component
-// const Page = ({params}) => {
-//   const {slug} = params;
-//   // return (
-//   //   <>
-
-//   //   <section>
-//   //     Post ID: {slug}
-//   //   </section>
-//   //   </>
-//   // )
-// }
-
-// export default Page
-
-// export async function generateStaticParams() {
-//   const posts = await fetch('http://localhost:3000/posts').then((res) => res.json())
-
-//   return posts
-// }

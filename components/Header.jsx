@@ -18,16 +18,17 @@ const menuItems = [
   ];
 
 const Header = () => {
-    const items = menuItems.map(i => <li>{i}</li>)
+    // const items = menuItems.map(i => <li>{i}</li>)
     const navLinks = [
         {href: "/", label: 'Home'},
+        {href: "/post", label: 'Posts'},
         {href: "/about", label: 'About'},
         {href: "/categories", label: 'Categories'},
         {href: "/studio", label: 'Studio'},
     ]
     return (
-        <header className="w-full">
-            <Navbar isBordered className="flex items-center justify-between m-2 text-gray-600 dark:text-gray-400 bg-inherit">
+        <header className="light w-full light:bg-gray-400">
+            <Navbar isBordered className="flex items-center justify-between text-gray-600 dark:text-gray-400 ">
                 <NavbarContent justify="start">
                     <NavbarBrand className="flex items-center justify-between">
                         <Link href='/' className="flex">
@@ -41,10 +42,10 @@ const Header = () => {
                         </Link>
                     </NavbarBrand>
                 </NavbarContent>
-                    {navLinks.map((link) => (
-                <NavbarContent key={link._id} className="hidden sm:flex gap-4" justify="center">
-                        <NavbarItem key={link.label} isActive>
-                            <Link color="foreground" key={link.label} className="hover:text-[#2a86ff]" href={link.href}>{link.label}</Link>
+                    {navLinks?.map((link) => (
+                <NavbarContent key={link.href} className="flex sm:flex gap-4" justify="center">
+                        <NavbarItem  isActive>
+                            <Link color="foreground"  className="hover:text-[#2a86ff]" href={link.href}>{link.label}</Link>
                         </NavbarItem>
                 </NavbarContent>
                     ))}
@@ -52,12 +53,12 @@ const Header = () => {
                 <NavbarContent as='div' className="items-center hidden lg:flex" justify="end">
              
                     <NavbarItem className="hidden lg:flex">
-                        <Link href='/signup' className="text-slate-500 px-2 py-2 mr-3 rounded-lg ">
+                        <Link href='/signup' className="text-slate-500 px-2 py-2 mr-3 rounded-lg hover:bg-slate-800 hover:text-neutral-400">
                             Login
                         </Link>
                     </NavbarItem>
                     <NavbarItem>
-                        <Button as={Link} className="bg-pink-500 opacity-60 hover:opacity-100" href="/" variant="flat">Sign Up</Button>
+                        <Button as={Link} className="bg-[#2a86ff] opacity-60 hover:opacity-100" href="/" variant="flat">Sign Up</Button>
                     </NavbarItem>
                 </NavbarContent>
                 
