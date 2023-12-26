@@ -1,11 +1,6 @@
 // ./nextjs-app/app/_components/Post.jsx
 
-<<<<<<< HEAD
-import Link from 'next/link'
-const Post = ({ post }) => {
-=======
 "use client";
->>>>>>> dev
 
 import { PortableText } from "@portabletext/react";
 import imageUrlBuilder from "@sanity/image-url";
