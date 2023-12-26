@@ -11,11 +11,7 @@ import Post from "../../../components/Post";
 import { postQuery } from "../../../sanity/lib/queries";
 import { sanityFetch } from "../../../sanity/lib/sanityFetch";
 
-// export async function generateStaticParams() {
-//   const posts = await client.fetch(postPathsQuery);
 
-//   return posts
-// }
 
 export default async function Page({params}) {
   const post = await sanityFetch({query: postQuery, params})
