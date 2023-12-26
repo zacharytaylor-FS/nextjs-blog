@@ -19,8 +19,7 @@ const menuItems = [
 
 const Header = () => {
     // const items = menuItems.map(i => <li>{i}</li>)
-<<<<<<< HEAD
-=======
+
     const navLinks = [
         {href: "/", label: 'Home'},
         {href: "/post", label: 'Posts'},
@@ -28,7 +27,7 @@ const Header = () => {
         {href: "/categories", label: 'Categories'},
         {href: "/studio", label: 'Studio'},
     ]
->>>>>>> dev
+
     return (
         <header className="light w-full light:bg-gray-400">
             <Navbar isBordered className="flex items-center justify-between text-gray-600 dark:text-gray-400 ">
@@ -50,19 +49,8 @@ const Header = () => {
                         <NavbarItem  isActive>
                             <Link color="foreground"  className="hover:text-[#2a86ff]" href={link.href}>{link.label}</Link>
                         </NavbarItem>
-<<<<<<< HEAD
-                        <NavbarItem isActive>
-                            <Link aria-current='categories' className="hover:text-white" color='secondary 'href='/categories'>Categories</Link>
-                        </NavbarItem>
-                        <NavbarItem>
-                            <Link color="foreground" className="hover:text-white" href='/studio'>Studio</Link>
-                        </NavbarItem>
-                        
-                    </NavbarContent>
-=======
                 </NavbarContent>
                     ))}
->>>>>>> dev
 
                 <NavbarContent as='div' className="items-center hidden lg:flex" justify="end">
              
