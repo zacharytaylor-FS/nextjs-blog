@@ -17,7 +17,7 @@ const PostDetail = ({posts = []}) => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-5">
                 {posts.map((post) => (
 
-            <Card className='w-[320px] min-w-[280px] light:bg-gray-100'>
+            <Card key={post._id} className='w-[320px] min-w-[280px] light:bg-gray-100'>
 
             <CardHeader className='flex gap-3'>
                 <Image
