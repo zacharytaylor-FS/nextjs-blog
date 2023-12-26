@@ -1,6 +1,5 @@
 // `app/posts/[id]/page.jsx` is the UI for the '/posts/1' URL
 
-
 /** Dynamic Routes
  * * Dynamic data - Unknown, not sure of the exact segment name will be
  * * Dynamic Segments - filed in at request time or prerendered build time
@@ -9,15 +8,14 @@
  *  
  */
 import Post from "../../../components/Post";
-import { client } from "../../../sanity/lib/client";
-import { postPathsQuery, postQuery } from "../../../sanity/lib/queries";
+import { postQuery } from "../../../sanity/lib/queries";
 import { sanityFetch } from "../../../sanity/lib/sanityFetch";
 
-export async function generateStaticParams() {
-  const posts = await client.fetch(postPathsQuery);
+// export async function generateStaticParams() {
+//   const posts = await client.fetch(postPathsQuery);
 
-  return posts
-}
+//   return posts
+// }
 
 export default async function Page({params}) {
   const post = await sanityFetch({query: postQuery, params})
