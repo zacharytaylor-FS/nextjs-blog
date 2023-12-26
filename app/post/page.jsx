@@ -10,16 +10,8 @@ export default async function PostPage() {
     return(
       <div>
         <Post posts={posts} />
-        {/* {categories.map((category) => (
-            <ul className="flex flex-row" key={category}>
-
-                <button key={category} className="bg-slate-600 px-4 py-2">{category.title}</button>
-            </ul>
-        ))} */}
-        {/* <Post posts={posts} /> */}
+      
         {/* <DocumentsCount data={data} /> */}
-        {/* <Card /> */}
-        {/* <TabList /> */}
       </div>
     ) 
     

@@ -27,7 +27,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "sanity/lib/queries.ts"  ],
+, "sanity/lib/queries.js",
+"sanity/lib/sanityFetch.ts",  ],
   "exclude": [
     "node_modules"
   ]

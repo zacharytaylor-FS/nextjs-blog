@@ -6,13 +6,13 @@ export default function Posts({ posts = [] }) {
 
   return (
     <div className="container mx-auto">
-    <div className="py-8">
+    <div className="">
 
     <p className="text-[12px] italic py-3"> {postsCount} Posts</p>
     <h1 className="text-3xl mb-3 font-extrabold">Posts</h1>
     </div>
     <Divider />
-    <div className="container mx-auto grid grid-cols-1 gap-10 divide-y justify-center divide-blue-100">
+    <div className="container mx-auto py-3 grid grid-cols-1 gap-10 divide-y justify-center divide-blue-100">
       {posts.map((post) => (
         <Card
           key={post._id}
