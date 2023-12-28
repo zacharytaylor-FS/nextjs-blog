@@ -10,8 +10,6 @@ export default async function PostPage() {
     return(
       <div>
         <Post posts={posts} />
-      
-        {/* <DocumentsCount data={data} /> */}
       </div>
     ) 
     

@@ -1,19 +1,25 @@
 // ./nextjs-app/app/page.tsx
 
+import Categories from '../../components/Categories';
 import Hero from "../../components/Hero";
+import Post from "../../components/Post";
 import PostDetails from "../../components/PostDetails";
 import Posts from "../../components/Posts";
-import { postsQuery } from "../../sanity/lib/queries";
+import { categoryQuery, postsQuery } from "../../sanity/lib/queries";
 import { sanityFetch } from "../../sanity/lib/sanityFetch";
 
 export default async function Home() {
   const posts = await sanityFetch({ query: postsQuery });
+  const categories = await sanityFetch({query: categoryQuery})
+
   // console.log(posts)
   return(
     <div>
       <Hero />
+      <Post post={posts} />
       <Posts posts={posts} />
       <PostDetails posts={posts}/>
+      <Categories categories={categories}/>
     </div>
   ) 
   

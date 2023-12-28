@@ -20,10 +20,10 @@ const RootLayout = ({
    * This will be populated with nested layouts or pages
    */
   children }) => (
-    <html lang="en" className='light light:text-black  bg-background'>
-      <body className={`${openSans.className} ${openSans.variable} ${lato.variable} flex h-screen flex-col md:overflow-scroll`}>
+    <html lang="en" className='light light:text-black dark:text-white bg-background w-full'>
+      <body className={`${openSans.className} ${openSans.variable} ${lato.variable} flex h-screen flex-col md:overflow-scroll `}>
         <Providers>
-          <Header />
+          <Header/>
           <main className='flex-grow md:overflow-y-auto'>
             {children}
           </main>

@@ -5,7 +5,7 @@ export default function MyCard(){
 
   return (
     <Card className="max-w-[340px]">
-      <CardHeader className="justify-between">
+      <CardHeader shadow="lg" className="justify-between">
         <div className="flex gap-5">
           <Avatar isBordered radius="full" size="md" src="/images/tg.png" />
           <div className="flex flex-row gap-1 items-start justify-center">
